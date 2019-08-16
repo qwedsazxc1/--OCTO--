@@ -1,0 +1,37 @@
+#include<iostream>
+using namespace std;
+
+class A{
+	public:
+		A(){
+			cout<<a<<endl;
+		}
+		void Set_a(int a){
+			this->a=a;
+			Get_a();
+		}
+		void print(){
+			cout<<this<<endl;
+		}
+	private:
+		void Get_a(){
+			cout<<a<<endl;
+		}
+		int a=0;
+};
+void teat(A*);
+int main(){
+	A obj1;
+	A* ptr=&obj1;
+	cout<<ptr<<endl;
+	cout<<&obj1<<endl;
+	
+	obj1.Set_a(6);
+	ptr->Set_a(10);
+	ptr->print();
+	
+	return 0;
+}
+void teat(A* obj){
+	
+}
